@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(App());
+  runApp(const App());
 }
 
 class App extends StatelessWidget {
+  const App({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -41,7 +43,7 @@ class App extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 60,
               ),
               Text('Total Balance',
@@ -49,10 +51,10 @@ class App extends StatelessWidget {
                     fontSize: 24,
                     color: Colors.white.withOpacity(0.5),
                   )),
-              SizedBox(
+              const SizedBox(
                 height: 8,
               ),
-              Text(
+              const Text(
                 '\$5 194 482',
                 style: TextStyle(
                   fontSize: 40,
@@ -60,7 +62,7 @@ class App extends StatelessWidget {
                   fontWeight: FontWeight.w600,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 16,
               ),
               Row(
@@ -70,7 +72,7 @@ class App extends StatelessWidget {
                       color: Colors.amber,
                       borderRadius: BorderRadius.circular(40),
                     ),
-                    child: Padding(
+                    child: const Padding(
                       padding: EdgeInsets.symmetric(
                         horizontal: 24,
                         vertical: 16,
