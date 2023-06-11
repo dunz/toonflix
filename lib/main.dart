@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:toonflix/widgets/button.dart';
 
 void main() {
   runApp(const App());
@@ -11,7 +12,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: const Color(0xFF1F2123),
+        backgroundColor: const Color(0xFF181818),
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16),
           child: Column(
@@ -46,11 +47,13 @@ class App extends StatelessWidget {
               const SizedBox(
                 height: 60,
               ),
-              Text('Total Balance',
-                  style: TextStyle(
-                    fontSize: 24,
-                    color: Colors.white.withOpacity(0.5),
-                  )),
+              Text(
+                'Total Balance',
+                style: TextStyle(
+                  fontSize: 24,
+                  color: Colors.white.withOpacity(0.5),
+                ),
+              ),
               const SizedBox(
                 height: 8,
               ),
@@ -65,26 +68,26 @@ class App extends StatelessWidget {
               const SizedBox(
                 height: 16,
               ),
-              Row(
+              const Wrap(
+                spacing: 16,
+                runSpacing: 16,
                 children: [
-                  Container(
-                    decoration: BoxDecoration(
-                      color: Colors.amber,
-                      borderRadius: BorderRadius.circular(40),
-                    ),
-                    child: const Padding(
-                      padding: EdgeInsets.symmetric(
-                        horizontal: 24,
-                        vertical: 16,
-                      ),
-                      child: Text(
-                        'Transfer',
-                        style: TextStyle(fontSize: 22),
-                      ),
-                    ),
-                  )
+                  Button(
+                    text: 'Transfer',
+                    bgColor: Colors.amber,
+                    textColor: Colors.black,
+                  ),
+                  Button(
+                    text: 'Request',
+                    bgColor: Color(0xFF1F2123),
+                    textColor: Colors.white,
+                  ),
                 ],
-              )
+              ),
+              const Text(
+                'test',
+                style: TextStyle(color: Colors.white, fontSize: 32),
+              ),
             ],
           ),
         ),
